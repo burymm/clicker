@@ -1,0 +1,23 @@
+
+
+.progress-bar {
+  width: 100%;
+  border: 1px solid var(--secondary);
+  min-height: 30px;
+}
+
+.progress {
+  min-height: 30px;
+  background-color: var(--progress);
+}
+
+.bg, .meter {
+  fill: none;
+  stroke-width: 20px;
+  stroke-miterlimit: round;
+}
+.meter {
+  transition: stroke-dashoffset 850ms ease-in-out;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}

@@ -1,0 +1,5 @@
+<p> {{ config.title }} component <span *ngIf="collected > 0">({{ collected }})</span> </p>
+<div class="progress-bar">
+  <div class="progress" [style.width.%]="loadingPercent"></div>
+</div>
+<button [disabled]="!isCanCollect()" (click)="collect()"> Collect</button>
