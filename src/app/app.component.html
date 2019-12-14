@@ -1,3 +1,14 @@
+<h2> Developer's tears {{ tears }}</h2>
 <div class="item-wrapper">
-  <app-clicker-item *ngFor="let config of configs" [config]="config"></app-clicker-item>
+  <app-clicker-item
+    *ngFor="let config of configs"
+    [config]="config"
+    [isCanHireDeveloper]="config.developerConst <= tears && !config.isDeveloperHired"
+    [isCanUpgrade]="config.upgradeCost <= tears"
+    [isCanBuyComponent]="config.openComponentConst <= tears"
+    (collectTears)="onCollectTears($event)"
+    (buyComponent)="onByComponent($event)"
+    (hireDeveloper)="onHireDeveloper($event)"
+    (upgradeItem)="onUpgradeItem($event)"
+  ></app-clicker-item>
 </div>
