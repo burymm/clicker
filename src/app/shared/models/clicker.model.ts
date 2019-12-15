@@ -9,4 +9,5 @@ export interface ClickerConfigModel {
   openComponentConst: number;
   isDeveloperHired: boolean;
   isComponentOpened: boolean;
+  loadingImage: string;
 }

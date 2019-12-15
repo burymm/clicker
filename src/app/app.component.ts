@@ -21,6 +21,7 @@ export class AppComponent {
     isDeveloperHired: false,
     openComponentConst: 0,
     isComponentOpened: true,
+    loadingImage: 'https://media.giphy.com/media/l1J9xCZo3aw9QRxsY/giphy.gif',
   }, {
     title: 'CSS',
     collectValue: 10,
@@ -32,6 +33,7 @@ export class AppComponent {
     isDeveloperHired: false,
     openComponentConst: 30,
     isComponentOpened: false,
+    loadingImage: 'https://media.giphy.com/media/l49JNurXQRqzoZPFe/giphy.gif',
   }, {
     title: 'JS',
     collectValue: 50,
@@ -43,6 +45,7 @@ export class AppComponent {
     isDeveloperHired: false,
     openComponentConst: 100,
     isComponentOpened: false,
+    loadingImage: 'https://media.giphy.com/media/d6WWh3Em7kWHu/giphy.gif',
   }];
 
   onCollectTears($event) {

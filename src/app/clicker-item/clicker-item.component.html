@@ -1,18 +1,23 @@
 <div class="flex h5" *ngIf="config.isComponentOpened">
   <div class="outline w-75 ma2">
     <p> {{ config.title }} component <span *ngIf="collected > 0">({{ collected }})</span></p>
-    <div class="progress-bar">
-      <div class="progress" [style.width.%]="loadingPercent"></div>
+    <div class="flex">
+      <div class="progress-bar w-100">
+        <div class="progress" [style.width.%]="loadingPercent"></div>
+      </div>
     </div>
-    <button [disabled]="!isCanCollect()" (click)="collect()">Collect {{config.collectValue}}</button>
+    <button [disabled]="!isCanCollect()" (click)="collect()">Git push {{config.collectValue}}</button>
     <button (click)="upgrade()" [disabled]="!isCanUpgrade">Upgrade [{{config.upgradeCost}}]</button>
   </div>
-  <div class="outline w-25">
+  <div class="flex flex-column outline w-25">
     <button [disabled]="!isCanHireDeveloper" (click)="onHireDeveloper()">
       <span>Hire developer</span>
       <span *ngIf="config.isDeveloperHired"> [Hired] </span>
       [{{config.developerConst}}]
     </button>
+    <div class="flex-grow-1 h-0">
+      <img class="h-100" *ngIf="config.isDeveloperHired" [src]="config.loadingImage" alt="">
+    </div>
   </div>
 </div>
 <div class="flex h5 flex-column" *ngIf="!config.isComponentOpened">
